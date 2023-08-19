@@ -15,7 +15,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <aspectj.version>1.9.9.1</aspectj.version>
-    <Test>TestNgXml/testNg.xml</Test>
+    <Test>resources/testNgXmlFiles/testNg.xml</Test>
   </properties>
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
