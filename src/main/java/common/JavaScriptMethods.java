@@ -6,22 +6,22 @@ import org.openqa.selenium.WebElement;
 
 public class JavaScriptMethods {
 
-    public String getTitleByJS(WebDriver driver) {
+    public static String getTitleByJS(WebDriver driver) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         return js.executeScript("return document.title;").toString();
     }
 
- public void scrollByJS(WebDriver driver, int xValue, int yValue) {
+ public static void scrollByJS(WebDriver driver, int xValue, int yValue) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(xValue,yValue)","");
+        js.executeScript("window.scrollBy("+xValue+","+yValue+")","");
     }
 
- public void scrollToElementByJS(WebDriver driver, WebElement element) {
+ public static void scrollToElementByJS(WebDriver driver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);",element);
     }
 
- public void scrollToBottomPagetByJS(WebDriver driver, WebElement element) {
+ public static void scrollToBottomPagetByJS(WebDriver driver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }

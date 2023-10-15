@@ -28,11 +28,10 @@ public class BasePage {
 
     public WebDriver initialize_driver(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
- ChromeOptions options = new ChromeOptions();
-           /* System.setProperty("webdriver.chrome.driver", "C:\\Users\\paran\\seleniumDrivers\\chromedriver-win64\\chromedriver.exe");
-           
+            ChromeOptions options = new ChromeOptions();
+           /*
+           System.setProperty("webdriver.chrome.driver", "C:\\Users\\paran\\seleniumDrivers\\chromedriver-win64\\chromedriver.exe");
             options.setBinary("C:\\Users\\paran\\seleniumDrivers\\chrome-win64\\chrome.exe");
-
             options.addArguments("--user-data-dir=C:\\Users\\paran\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1");
 */
             options.addArguments("--no-sandbox");
@@ -57,8 +56,6 @@ public class BasePage {
         try {
             FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/config.properties");
             prop.load(fis);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

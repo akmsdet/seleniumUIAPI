@@ -1,4 +1,4 @@
-package ui_chrome115;
+package uitest;
 
 import base.BasePage;
 import common.JavaScriptMethods;

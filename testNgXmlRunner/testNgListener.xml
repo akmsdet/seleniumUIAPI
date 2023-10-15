@@ -12,7 +12,7 @@
 
     <test name="Test">
         <classes>
-            <class name="ui_chrome115.TestPage" />
+            <class name="uitest.TestPage" />
 
         </classes>
     </test>

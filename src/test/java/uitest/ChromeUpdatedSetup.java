@@ -6,7 +6,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 public class ChromeUpdatedSetup {
     WebDriver driver = null;
@@ -24,10 +27,15 @@ public class ChromeUpdatedSetup {
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("incognito");
         options.addArguments("--start-maximized");
+        // To disable Java Socket exception
+        DesiredCapabilities dc = new DesiredCapabilities();
+        dc.setCapability(ChromeOptions.CAPABILITY,options);
         driver = new ChromeDriver(options);
 
         driver.get("https://google.co.in");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.findElement(By.name("q")).sendKeys("Selenium", Keys.ENTER);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         Thread.sleep(5000);
         for (int i = 0; i <= 1000; i = i + 10) {
             JavaScriptMethods.scrollByJS(driver, 0, i);
