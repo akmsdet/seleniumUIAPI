@@ -12,16 +12,18 @@ public class Chrome115Setup {
 
     @Test
     public void testChrome115() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\anil.k.mishra\\seleniumDrivers\\chromedriver-win64\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
+  ChromeOptions options = new ChromeOptions();      
+/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\anil.k.mishra\\seleniumDrivers\\chromedriver-win64\\chromedriver.exe");
+        
         options.setBinary("C:\\Users\\anil.k.mishra\\seleniumDrivers\\chrome-win64\\chrome.exe");
 
         options.addArguments("--user-data-dir=C:\\Users\\anil.k.mishra\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1");
-        options.addArguments("--no-sandbox");
+*/        
+	options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("incognito");
-        options.addArguments("start-maximized");
+        options.addArguments("--start-maximized");
         driver = new ChromeDriver(options);
 
         driver.get("https://google.co.in");

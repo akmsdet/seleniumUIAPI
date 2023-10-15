@@ -28,11 +28,13 @@ public class BasePage {
 
     public WebDriver initialize_driver(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\anil.k.mishra\\seleniumDrivers\\chromedriver-win64\\chromedriver.exe");
-            ChromeOptions options = new ChromeOptions();
-            options.setBinary("C:\\Users\\anil.k.mishra\\seleniumDrivers\\chrome-win64\\chrome.exe");
+ ChromeOptions options = new ChromeOptions();
+           /* System.setProperty("webdriver.chrome.driver", "C:\\Users\\paran\\seleniumDrivers\\chromedriver-win64\\chromedriver.exe");
+           
+            options.setBinary("C:\\Users\\paran\\seleniumDrivers\\chrome-win64\\chrome.exe");
 
-            options.addArguments("--user-data-dir=C:\\Users\\anil.k.mishra\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1");
+            options.addArguments("--user-data-dir=C:\\Users\\paran\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1");
+*/
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--remote-allow-origins=*");

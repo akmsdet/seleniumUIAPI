@@ -15,14 +15,14 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <aspectj.version>1.9.9.1</aspectj.version>
-    <Test>resources/testNgXmlFiles/testNg.xml</Test>
+    <Test>testNgXmlRunner/testNg.xml</Test>
   </properties>
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.11.0</version>
+      <version>4.13.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
     <dependency>
@@ -48,8 +48,9 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-http-jdk-client</artifactId>
-      <version>4.8.2</version>
+      <version>4.13.0</version>
     </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
     <dependency>
       <groupId>org.apache.poi</groupId>
@@ -65,7 +66,7 @@
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>7.4.0</version>
+      <version>7.8.0</version>
     </dependency>
 
     <dependency>
